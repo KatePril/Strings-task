@@ -12,13 +12,16 @@ public class AppModel {
     }
 
     public String[] deleteElements(String[] list, String elementToBeDeleted) {
-        ArrayList<String> newList = new ArrayList<>();
+        int count = findElement(list, elementToBeDeleted);
+        String[] newList = new String[list.length - count];
+        int indexCount = 0;
         for (String element : list) {
             if (!element.equals(elementToBeDeleted)) {
-                newList.add(element);
+                newList[indexCount] = element;
+                indexCount++;
             }
         }
-        return (String[]) newList.toArray();
+        return newList;
     }
 
     public int findElement(String[] list, String elementToBeFounded) {

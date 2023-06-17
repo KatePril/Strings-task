@@ -8,7 +8,6 @@ public final class Input {
         Scanner scanner = new Scanner(System.in);
         printMessage(message);
         String userInput = scanner.nextLine();
-        scanner.close();
         return userInput;
     }
 
