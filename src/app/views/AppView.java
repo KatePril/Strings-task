@@ -1,5 +1,7 @@
 package app.views;
 
+import app.utils.Constants;
+
 public class AppView {
 
     public String printList(String[] list) {
@@ -9,6 +11,14 @@ public class AppView {
             listOutput.append(". ").append(list[i]).append("\n");
         }
         return String.valueOf(listOutput);
+    }
+
+    public String printReplyFindingElement(String element, int count) {
+        if (count == 0) {
+            return String.format(Constants.ABSENT_NAME_MSG, element);
+        } else {
+            return String.format(Constants.PRESENT_NAME_MSG, count, element);
+        }
     }
 
     private void getOutput(String output) {
