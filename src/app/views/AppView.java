@@ -4,7 +4,7 @@ import app.utils.Constants;
 
 public class AppView {
 
-    public String printList(String[] list) {
+    public String getList(String[] list) {
         StringBuilder listOutput = new StringBuilder();
         for (int i = 0; i < list.length; i++) {
             listOutput.append(i+1);
@@ -21,7 +21,7 @@ public class AppView {
         }
     }
 
-    private void getOutput(String output) {
+    public void getOutput(String output) {
         System.out.println(output);
     }
 }
