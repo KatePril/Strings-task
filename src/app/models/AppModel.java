@@ -21,6 +21,14 @@ public class AppModel {
         return (String[]) newList.toArray();
     }
 
-    public void executeTaskThree() {}
+    public int findElement(String[] list, String elementToBeFounded) {
+        int count = 0;
+        for (String element : list) {
+            if (element.equals(elementToBeFounded)) {
+                count++;
+            }
+        }
+        return count;
+    }
 
 }
